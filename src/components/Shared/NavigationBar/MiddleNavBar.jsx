@@ -3,6 +3,7 @@ import { FaRegHeart, FaRegUser, FaShoppingCart } from "react-icons/fa";
 import { GiRecycle } from "react-icons/gi";
 import Container from "../../Common/Container";
 import logo from "../../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 function MiddleNavBar() {
   return (
@@ -12,6 +13,7 @@ function MiddleNavBar() {
           {/* <img src="" alt="" /> */}
           <img src={logo} alt="" />
         </div>
+
         <div className="w-[517px] border border-[#efefef] border-opacity-0">
           <div className="relative flex w-full items-center">
             <input
@@ -53,6 +55,7 @@ function MiddleNavBar() {
             </button>
           </div>
         </div>
+
         <div className="flex gap-2">
           <ul className="col-span-2 flex justify-start gap-6 lg:col-span-5 lg:justify-end">
             <li>
@@ -61,9 +64,11 @@ function MiddleNavBar() {
             <li>
               <FaRegHeart className="text-2xl" />
             </li>
-            <li>
-              <FaShoppingCart className="text-2xl" />
-            </li>
+            <Link to="/add-to-cart">
+              <li>
+                <FaShoppingCart className="text-2xl" />
+              </li>
+            </Link>
             <li>
               <FaRegUser className="text-2xl" />
             </li>
